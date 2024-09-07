@@ -47,12 +47,6 @@ jobs:
           /p:RepositoryUrl="${{ github.server_url }}/${{ github.repository }}" `
           /p:Authors=${{ github.repository_owner }}
 
-      - name: Enumerate files
-        shell: bash
-        run: |
-          find src/go
-          find src/dotnet/bin
-
       - name: Echo artifact directory
         run: |
           echo ${{ env.ArtifactDirectory }}
